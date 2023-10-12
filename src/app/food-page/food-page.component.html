@@ -1,0 +1,45 @@
+<app-not-found [visible]="!product"
+    notFoundMessage = "Product not found!"
+    resetLinkText = "Go To Homepage"
+></app-not-found>
+<div *ngIf="product" class="container">
+    <img class="image" [src]="product.imageURL" alt="food.name">
+    <div class="detail">
+        <div class="header">
+             <span class="name">
+                {{product.name}}
+            </span>
+            <span class="favorite {{product.favorite?'':'not'}}">
+                0
+            </span>
+        </div>
+        <div class="stars"
+             size = "30px">
+            Etoiles marche pas
+        </div>
+        
+        <div class="origin">
+            <span *ngFor="let origin of product.origin">
+                {{origin}}
+            </span>
+        </div>
+
+        <div class="tags">
+            <app-tags [productPageTags]="product.Tags"></app-tags>
+        </div>
+
+        <div class="cook-time">
+            <span>
+                Le temps de cuisson est d'environ 
+                {{product.cookTime}}
+                 minutes
+            </span>
+        </div>
+
+        <div class="price">
+            <span>
+                {{product.price|currency}}
+            </span>
+        </div>
+        <button (click)="addToCart()">Add to card</button>
+</div>

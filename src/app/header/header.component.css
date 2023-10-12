@@ -1,0 +1,147 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100hv;
+  background: url(../../assets/images/logo/kitchen-1.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+header::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(50px);
+  z-index: -1;
+}
+
+header::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, .4), transparent);
+  transition: .3s;
+}
+
+header:hover::after{
+  left: 100%;
+}
+
+.logo{
+  font-size: 2rem;
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 700;
+}
+.navbar a{
+  font-size: 1.15rem;
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.5rem;
+}
+
+.icons{
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+h1{
+  padding-top: .5rem;
+  font-size: 2rem;
+  color: black;
+}
+
+#check{
+  display: none;
+}
+
+/* Breakpoints*/
+@media(max-width:992px){
+  .header{
+    padding: 1.5rem 5%;
+  }
+}
+
+
+@media(max-width:768px){
+  .icons{
+    display: inline-flex;
+    z-index: 300;
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+  #check:checked~.icons #menu-icons{
+    display: none;
+  }
+
+  .icons #close-icons{
+    display: none;
+  }
+
+  #check:checked~.icons #close-icons{
+    display: block;
+  }
+
+  .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    overflow: hidden;
+    transition: .3s ease;
+  }
+
+  #check:checked~.navbar{
+    height: 17.7rem;
+  }
+
+  .navbar a{
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    transition: .3s ease;
+    opacity: 0;
+    /*transition: .3s;*/
+  }
+  .navbar a:hover{
+    font-size: 1.4rem;
+    color: red;
+  }
+
+  #check:checked~.navbar a{
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(.15s * var(--i));
+  }
+}
