@@ -1,0 +1,40 @@
+<app-pop-up></app-pop-up>
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found [visible]=" !products ||products.length <=0 "></app-not-found>
+<ul>
+    <li *ngFor="let product of products">
+        <a routerLink="/food/{{product.id}}">
+
+            <img src="{{product.imageURL}}" alt="lol">
+            <div class="content">
+                <div class="name">
+                    {{product.name}}
+                </div>
+                <span class="favorite {{product.favorite?'':'not'}}">
+                    0
+                </span>
+                <div class="stars">
+                    Etoiles marche pas
+                </div>
+                <div class="product-item-footer">
+                    <div class="origin">
+                        <span *ngFor="let origin of product.origin">
+                            {{origin}}
+                        </span>
+                    </div>
+                    <div class="cook-time">
+                        <span>⌚</span>
+                        {{product.cookTime}}
+                    </div>
+                </div>
+                <div class="price">
+                    <span>
+                        {{product.price|currency}}
+                    </span>
+                </div>
+
+            </div>
+        </a>
+    </li>
+</ul>
