@@ -4,10 +4,11 @@ export class Product{
     name!:string;
     price!:number;
     Tags?:string[];
-    favorite:boolean = false;
+    Code!:string;
     stars:number = 0;
     imageURL!:string;
+    Full_motif!:string;
     origin!:string[];
-    cookTime!:string;
+    Description!:string;
 
 }

@@ -3,43 +3,60 @@
     resetLinkText = "Go To Homepage"
 ></app-not-found>
 <div *ngIf="product" class="container">
-    <img class="image" [src]="product.imageURL" alt="food.name">
-    <div class="detail">
-        <div class="header">
-             <span class="name">
+    <div class="top">
+        <div class="top_gauche">
+            <div class="imag">
+                <img class="image" [src]="product.imageURL" alt="food.name">
+                <div class="F_T">
+                    <a href="">Voir la fiche technique</a>
+                </div>
+                <div class="M_C">
+                    <a href="">Voir le motif Complet</a>
+                </div>
+            </div>
+        </div>
+        <div class="top_droit">
+            <div class="code">
+                {{product.Code}}
+            </div>
+            <div class="nom">
                 {{product.name}}
-            </span>
-            <span class="favorite {{product.favorite?'':'not'}}">
-                0
-            </span>
+            </div>
+            <div class="description">
+                {{product.Description}}
+            </div>
+            <div class="prix">
+                {{product.price}}
+            </div>
+            <div class="Soumission">
+                <button (click)="addToCart()">Add to card</button>
+            </div>
         </div>
-        <div class="stars"
-             size = "30px">
-            Etoiles marche pas
+    </div>
+    <div class="bas">
+        <div class="titre">
+            <h2>Caracteristique</h2>
         </div>
-        
-        <div class="origin">
-            <span *ngFor="let origin of product.origin">
-                {{origin}}
-            </span>
+        <div class="Caract">
+                <span *ngFor="let origin of product.origin">
+                    {{origin}}
+                </span>
         </div>
-
-        <div class="tags">
-            <app-tags [productPageTags]="product.Tags"></app-tags>
-        </div>
-
-        <div class="cook-time">
-            <span>
-                Le temps de cuisson est d'environ 
-                {{product.cookTime}}
-                 minutes
-            </span>
-        </div>
-
-        <div class="price">
-            <span>
-                {{product.price|currency}}
-            </span>
-        </div>
-        <button (click)="addToCart()">Add to card</button>
+    </div>
 </div>
+<div class="entretien">
+    <h3>
+        Entretien
+    </h3>
+    <p>
+        Pour l'entretien quotidien du film, utilisez uniquement des détergents au pH neutre, n'utilisez pas de produits au pH trop acide ou trop basique 
+        <br><br>
+        - L'eau chaude (non bouillante) peut aider à éliminer les taches tenaces- Dans certains cas, une solution à base d'alcool isopropylique et d'eau peut être efficace (70 % ISO 30 % H2O. Pas sur les films imprimés).
+        <br><br>
+        - N'utilisez que des chiffons doux ou des éponges pour nettoyer le vinyle (sauf les paillettes).
+        <br><br>
+        - N'utilisez pas de produits de nettoyage à base organique comme l'ammoniaque ou le vernis pour nettoyer le vinyle.
+    </p>
+</div>
+<app-slider></app-slider>
+
