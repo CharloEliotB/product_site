@@ -46,66 +46,72 @@ export class ProductService {
         name : 'alloss',
         price : 10,
         Tags : [ 'Pizza', 'Lunch', 'Boobs'], 
-        favorite : true,
+        Code : 'A11',
         stars: 0,
         imageURL: '/assets/images/foods/food-1.jpg',
         origin:['italy'],
-        cookTime:'10-20'
+        Description:"Le modele de couleur C13 est une belle immitation de ciment qui permet d’aller chercher une couleur gris terne tout en rajoutant des certains motifs, mais sans être trop extravagant. Je vous conseil aussi d’observer le modele d16 (plus foncé) et le modele S24(plus pâle).",
+        Full_motif :'/assets/images/foods/food-1.jpg'
       },
       {
         id : 2,
         name : 'Hamburger',
         price : 10,
         Tags : ['Fastfood', 'Lunch','Bob'], 
-        favorite : false,
+        Code : 'A11',
         stars: 0,
         imageURL: '/assets/images/foods/food-2.jpg',
         origin:['italy', 'brasil'],
-        cookTime:'10-20'
+        Description:"Le modele de couleur C13 est une belle immitation de ciment qui permet d’aller chercher une couleur gris terne tout en rajoutant des certains motifs, mais sans être trop extravagant. Je vous conseil aussi d’observer le modele d16 (plus foncé) et le modele S24(plus pâle).",
+        Full_motif :'/assets/images/foods/food-1.jpg'
       },
       {
         id : 3,
         name : 'allo',
         price : 10,
         Tags : ['Pizza', 'Lunch'], 
-        favorite : false,
+        Code : 'A11',
         stars: 0,
         imageURL: '/assets/images/foods/food-3.jpg',
         origin:['italy'],
-        cookTime:'10-20'
+        Description:"Le modele de couleur C13 est une belle immitation de ciment qui permet d’aller chercher une couleur gris terne tout en rajoutant des certains motifs, mais sans être trop extravagant. Je vous conseil aussi d’observer le modele d16 (plus foncé) et le modele S24(plus pâle).",
+        Full_motif :'/assets/images/foods/food-1.jpg'
       },
       {
         id : 4,
-        name : 'allo',
+        name : 'Gris de Gris',
         price : 10,
         Tags : ['Fastfood', 'Lunch'], 
-        favorite : false,
+        Code : 'A11',
         stars: 0,
         imageURL: '/assets/images/foods/food-4.jpg',
         origin:['italy'],
-        cookTime:'10-25'
+        Description:"Le modele de couleur C13 est une belle immitation de ciment qui permet d’aller chercher une couleur gris terne tout en rajoutant des certains motifs, mais sans être trop extravagant. Je vous conseil aussi d’observer le modele d16 (plus foncé) et le modele S24(plus pâle).",
+        Full_motif :'/assets/images/foods/food-1.jpg'
       },
       {
-        id : 4,
+        id : 5,
         name : 'allo',
         price : 10,
         Tags : ['Fastfood', 'Pizza', 'Lunch'], 
-        favorite : false,
+        Code : 'A11',
         stars: 0,
         imageURL: '/assets/images/foods/food-4.jpg',
         origin:['italy'],
-        cookTime:'10-25'
+        Description:"Le modele de couleur C13 est une belle immitation de ciment qui permet d’aller chercher une couleur gris terne tout en rajoutant des certains motifs, mais sans être trop extravagant. Je vous conseil aussi d’observer le modele d16 (plus foncé) et le modele S24(plus pâle).",
+        Full_motif :'/assets/images/foods/food-1.jpg'
       },
       {
-        id : 4,
+        id : 6,
         name : 'allo',
         price : 10,
         Tags : ['Pizza', 'Lunch'], 
-        favorite : false,
+        Code : 'A11',
         stars: 0,
         imageURL: '/assets/images/foods/food-4.jpg',
         origin:['italy'],
-        cookTime:'10-25'
+        Description:"Le modele de couleur C13 est une belle immitation de ciment qui permet d’aller chercher une couleur gris terne tout en rajoutant des certains motifs, mais sans être trop extravagant. Je vous conseil aussi d’observer le modele d16 (plus foncé) et le modele S24(plus pâle).",
+        Full_motif :'/assets/images/foods/food-1.jpg'
       }
     ]
   }
